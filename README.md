@@ -2,7 +2,9 @@
 
 Live: https://tarasshynkarenko.com/moon
 
-A real-time lunar surface renderer on WebGPU, built the same way as [Noniv/web-ocean](https://github.com/Noniv/web-ocean): no engine, a CDLOD mesh over summed tiled detail layers, a free camera locked above the surface, HDR with bloom and AgX tone mapping.
+A real-time lunar surface renderer on WebGPU.
+
+This project exists because of [web-ocean](https://github.com/Noniv/web-ocean) by Maksymilian Dendura ([@Noniv](https://github.com/Noniv)). Go see the ocean: https://ocean-noniv.vercel.app. I took its approach and pointed it at the Moon. That means no engine, a CDLOD mesh over summed tiled detail layers, a free camera that stays above the surface, camera-centred world-space clipmaps, and HDR with bloom and AgX tone mapping. The bloom and tone mapping code in `js/wgsl/post.js` is his, adapted under the MIT license. The idea of building it with Claude Code and having it check its own screenshots came from his write-up too.
 
 ## Run it
 
@@ -44,8 +46,12 @@ URL parameters: `cam=x,altitude,z,yawDeg,pitchDeg`, `fov=deg`, `scale=0.5`, `ui=
 
 **Sky.** Black, with procedural stars, a faint Milky Way, the Sun disc with a tight lens glare, and the Earth at 1.9 degrees: continents, clouds, ice caps, an ocean glint, a thin atmosphere limb, city lights on the night side, and its phase from the sun direction.
 
-The bloom and AgX tone mapping are adapted from web-ocean (MIT).
+## Credits
+
+- [web-ocean](https://github.com/Noniv/web-ocean) by Maksymilian Dendura: the architecture this is built on, and the bloom and AgX tone mapping in `js/wgsl/post.js` (MIT).
+- McEwen (1991), the lunar-Lambert reflectance model used for the regolith.
+- Built with Claude Code (Opus 5.5).
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE). The web-ocean copyright notice for `js/wgsl/post.js` is kept there as its license requires.
