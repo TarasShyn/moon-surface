@@ -4,7 +4,7 @@ Live: https://tarasshynkarenko.com/moon
 
 A real-time lunar surface renderer on WebGPU.
 
-This project exists because of [web-ocean](https://github.com/Noniv/web-ocean) by Maksymilian Dendura ([@Noniv](https://github.com/Noniv)). Go see the ocean: https://ocean-noniv.vercel.app. I took its approach and pointed it at the Moon. That means no engine, a CDLOD mesh over summed tiled detail layers, a free camera that stays above the surface, camera-centred world-space clipmaps, and HDR with bloom and AgX tone mapping. The bloom and tone mapping code in `js/wgsl/post.js` is his, adapted under the MIT license. The idea of building it with Claude Code and having it check its own screenshots came from his write-up too.
+This project exists because of [web-ocean](https://github.com/Noniv/web-ocean) by Maksymilian Dendura ([@Noniv](https://github.com/Noniv)). Go see the ocean: https://ocean-noniv.vercel.app. I took its approach and pointed it at the Moon. That means no engine, a CDLOD mesh over summed tiled detail layers, a free camera that stays above the surface, camera-centred world-space clipmaps, and HDR with bloom and AgX tone mapping. The bloom and tone mapping code in `js/wgsl/post.js` is his, adapted under the MIT license.
 
 ## Run it
 
