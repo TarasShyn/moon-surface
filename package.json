@@ -1,0 +1,16 @@
+{
+  "name": "moon-surface",
+  "version": "1.0.0",
+  "description": "Real-time WebGPU lunar surface: procedural craters and boulders, ray-marched sun shadows, airless sky with the Earth.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "build": "node build.mjs"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TarasShyn/moon-surface.git"
+  }
+}

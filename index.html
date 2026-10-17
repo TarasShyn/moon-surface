@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moon surface</title>
+<meta name="description" content="Real-time lunar surface on WebGPU: procedural craters and rocks, soft sun shadows over a curved Moon, a moving sky and the Earth.">
+<style>
+  html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+  #c { position: fixed; inset: 0; width: 100%; height: 100%; display: block; cursor: crosshair; }
+  #hud { position: fixed; left: 12px; top: 10px; font: 12px/1.45 ui-monospace, Menlo, Consolas, monospace; color: #e6e6e6;
+         text-shadow: 0 1px 2px #000a; pointer-events: none; user-select: none; }
+  #hud .help { opacity: .7; }
+  #panel { position: fixed; right: 12px; top: 10px; width: 320px; padding: 10px 12px; border-radius: 8px;
+           background: #0b0d10c8; backdrop-filter: blur(6px); color: #e5e5e5; font: 12px/1.3 system-ui, sans-serif; }
+  #panel.hidden { display: none; }
+  #panel label { display: grid; grid-template-columns: 1fr 120px 44px; gap: 6px; align-items: center; margin: 3px 0; }
+  #panel input { width: 120px; accent-color: #b8c4d6; }
+  #panel output { text-align: right; font-variant-numeric: tabular-nums; opacity: .8; }
+  #src { position: fixed; right: 12px; bottom: 10px; font: 12px system-ui, sans-serif; color: #e6e6e6a0; text-decoration: none; }
+  #src:hover { color: #fff; }
+  #err { position: fixed; inset: 0; display: none; padding: 40px; color: #f88; font: 16px system-ui; white-space: pre-wrap; background: #000; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="hud">
+  <div id="fps">starting…</div>
+  <div class="help">click: mouse look · WASD move · Space/E up · Q/C down · Shift fast · wheel speed · G walk (Space jumps) · Z zoom · H panel</div>
+</div>
+<div id="panel" class="hidden"></div>
+<a id="src" href="https://github.com/TarasShyn/moon-surface" target="_blank" rel="noopener">source on GitHub</a>
+<div id="err"></div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
